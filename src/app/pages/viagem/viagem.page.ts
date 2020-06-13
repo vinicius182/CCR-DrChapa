@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController, NavController } from '@ionic/angular';
+import { FretePage } from '../frete/frete.page';
 
 @Component({
   selector: 'app-viagem',
@@ -6,10 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viagem.page.scss'],
 })
 export class ViagemPage implements OnInit {
-
-  constructor() { }
+  constructor(public alertController: AlertController, public navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  async alertCalculo() {
+    const alert = await this.alertController.create({
+      header: 'CALCULAR O FRETE',
+      message: 'Deseja calcular uma estimativa de frete para a viagem?',
+      buttons: [
+        {
+          text: 'Não',
+          handler: () => {
+            console.log('Não')
+          }
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            console.log('Sim')
+            this.navCtrl.navigateForward('frete')
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }

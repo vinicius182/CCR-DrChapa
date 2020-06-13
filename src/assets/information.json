@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+            "name": "DADOS DA VIAGEM",
+            "children": [
+                {
+                    "origem" : "SANTOS,SP,BRASIL",
+                    "destino" : "CUIABA,MT,BRASIL",
+                    "km": "120",
+                    "tempo": "23"
+                }
+            ]
+        },
+        {
+            "name": "RECOMENDAÇÕES DA VIAGEM",
+            "children": [
+                {
+                    "horasSono": "8",
+                    "refeicoes": "3"
+                }
+            ]
+        },
+        {
+            "name": "ESTIMATIVA DE CUSTO",
+            "children":[
+                {
+                    "frete": "900000"
+                }
+            ] 
+        }
+    ]
+}
