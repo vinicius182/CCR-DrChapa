@@ -8,6 +8,13 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-card> 
+    <ion-card-content>
+      APERTE EM <b>COMPANHAR VIAGEM</b> E TE AJUDAREI A COM SUA SAÚDE DURANTE TODA A VIAGEM.
+    </ion-card-content>
+  </ion-card>
+
   <ion-list *ngFor="let item of information; let i = index;" class="accordion-list" lines="none" detail="false" no-padding>
 
     <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open, 'section' : !item.open}">
@@ -22,4 +29,7 @@
       <ion-list *ngFor="let child of item.children; let j = index" lines="none"></ion-list>
     </div>
   </ion-list>
+
+  <ion-button expand="full" color="success" class="btnSuccess btnAcompanhar">ACOMPANHAR VIAGEM</ion-button>
+
 </ion-content>
