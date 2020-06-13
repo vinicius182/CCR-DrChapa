@@ -1,17 +1,48 @@
-<ion-item class="child-item" text-wrap detail="false" lines="none">
-  <ion-row no-padding align-items-center>
-    <ion-col size="9">
-      <ion-row no-padding>
-        <ion-col size="12">
-          <h3>{{ product.name }}</h3>
-        </ion-col>
-        <ion-col size="12">
-          <p text-lowercase color="medium">{{ produt.information }}</p>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-    <ion-col size="3" text-right>
-      <ion-button fill="outline" (click)="buyItem(product)">{{ product.price }}</ion-button>
-    </ion-col>
-  </ion-row>
+<ion-item *ngIf="product.type == 1">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p>ORIGEM</p>    
+        <p>{{ product.origem }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p>DESTINO</p>    
+        <p>{{ product.destino }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <p>KM ESTIMADO</p>
+        <p>{{ product.km }}Km</p>
+      </ion-col>
+      <ion-col size="6">
+        <p>TEMPO ESTIMADO</p>
+        <p>{{ product.tempo }} HORAS</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+<ion-item  *ngIf="product.type == 2">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p>HORAS DE SONO</p>    
+        <p>{{ product.horasSono }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p>REFEIÇÕES</p>    
+        <p>{{ product.refeicoes }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+<ion-item *ngIf="product.type == 3">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <p>FRETE ESTIMADO</p>    
+        <p>R${{ product.frete }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-item>

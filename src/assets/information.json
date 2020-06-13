@@ -1,29 +1,35 @@
 {
     "items": [
         {
-            "name": "DADOS DA VIAGEM",
+            "name": "DETALHES DO TRAJETO",     
+            "type": "1",  
             "children": [
                 {
+                    "type": "1",
                     "origem" : "SANTOS,SP,BRASIL",
-                    "destino" : "CUIABA,MT,BRASIL",
+                    "destino" : "CUIABÁ, MT, BRASIL",
                     "km": "120",
                     "tempo": "23"
                 }
             ]
         },
         {
-            "name": "RECOMENDAÇÕES DA VIAGEM",
-            "children": [
+            "name": "RECOMENDADO PARA ESSA VIAGEM",
+            "type": "2",
+            "children":[
                 {
+                    "type": "2",
                     "horasSono": "8",
                     "refeicoes": "3"
                 }
-            ]
+            ] 
         },
         {
-            "name": "ESTIMATIVA DE CUSTO",
+            "name": "ESTIMATIVA MEU CUSTO",
+            "type": "3",
             "children":[
                 {
+                    "type": "3",
                     "frete": "900000"
                 }
             ] 
