@@ -26,18 +26,17 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private httpClient: HttpClient,
-    private messageToken: any
+    private httpClient: HttpClient
   ) {
     this.initializeApp();
   }
 
-  registerNotificationToken() {
+  registerNotificationToken(messageToken) {
       var headers = new HttpHeaders({
         'Content-Type' : 'application/json; charset=utf-8',
       });
 
-      headers = headers.append('notificationToken', this.messageToken);
+      headers = headers.append('notificationToken', messageToken);
 
       let requestOptions = {
         headers: headers
@@ -69,8 +68,7 @@ export class AppComponent {
 
     PushNotifications.addListener('registration',
       (token: PushNotificationToken) => {
-         this.messageToken =  token.value;
-         this.registerNotificationToken();
+         this.registerNotificationToken(token.value);
         //enviar token para a API
       }
     );
