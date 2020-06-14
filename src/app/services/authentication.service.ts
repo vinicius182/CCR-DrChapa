@@ -36,7 +36,7 @@ export class AuthenticationService {
     });
 
      var loginForm = {
-      username: '44992687881',
+      username: '44992687883',
       password: '123'
      };
 
@@ -44,7 +44,7 @@ export class AuthenticationService {
       headers: headers
    }
 
-     this.httpClient.post('http://192.168.0.22:8080/api/v1/auth/', loginForm, requestOptions)
+     this.httpClient.post('http://192.168.0.22:8080/api/v1/auth', loginForm, requestOptions)
      .subscribe(data => {
        console.log(data)
        this.storage.set('USER_INFO', data).then((reponse) => {
