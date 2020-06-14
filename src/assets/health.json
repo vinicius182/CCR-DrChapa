@@ -6,13 +6,13 @@
             "children": [
                 {
                     "color": "green",
-                    "title" : "REDUZA O SAL NA ALIMENTAÇÃO",
-                    "description" : "OMS recomenda o consumo diário de sal menor que 5g."
+                    "title" : "REDUZA O SAL",
+                    "description" : "É recomendado o consumo de menos de 5 gramas de sal por dia."
                 },
                 {
                     "color": "green",
                     "title" : "REDUZA O CONSUMO DE ÁLCOOL",
-                    "description" : "Recomenda-se beber menos de 2 dores diárias."
+                    "description" : "Recomenda-se beber menos de 2 doses diárias."
                 }
             ]
         },

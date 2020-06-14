@@ -40,19 +40,15 @@
           </ion-col>
         </ion-row>
 
-        <ion-row>
-          <ion-card>
-            <ion-card-content>
-              <span class="cardInfoTop">BUSCANDO DICAS DE SAÚDE E BEM ESTAR DURANTE O TRAJETO...</span>
-            </ion-card-content>
-          </ion-card>
-        </ion-row>
-
   <ion-col size="12" style="margin-top: 64px">
     <ion-button expand="full" style="min-height: 52px" (click)="alertCancelar()">CANCELAR ACOMPANHAMENTO</ion-button>
   </ion-col>
 
-  <ion-item-divider></ion-item-divider>
+  <ion-item-divider>
+    <ion-label>
+      Buscando dicas durante o trajeto...
+    </ion-label>
+  </ion-item-divider>
 
   <div id="timeline=content">
     <ul class="timeline">
@@ -67,13 +63,13 @@
               <p class="btnLabel" style="font-size: 14px; margin-left: 8px!important;">PLANO DE CUIDADO</p>
           </ion-row>
           <ion-card-content>
-            É muito importante se alongar durante viagens longas. <b>Que tal fazer uma parada rápida e esticar as pernas?</b> :)
+            Você está dirigindo a mais de 10 horas. <b>Que tal fazer uma parada rápida e esticar as pernas?</b>
             <ion-button fill="outline" expand="block" slot="end" style="margin-top: 16px">ACEITAR DESAFIO</ion-button>
           </ion-card-content>
         </ion-card>
       </li>
       <li class="event">
-        <p>Ribeirao Preto, SP 10 minutos atrás</p>
+        <p>Ribeirao Preto, SP 32 minutos atrás</p>
         <ion-card>
           <ion-card-header>
             <ion-img style="width: 100%; height: 100px;" src="../../../assets/imgs/timeLine/02.jpg"></ion-img>
@@ -81,7 +77,7 @@
           </ion-card-header>
           <ion-card-content>
             Já almoçou?
-Que tal esse restaurante saudável na beira da estrada? <b>Mas lembre-se de maneirar no sal.</b>
+          Encontrei esse restaurante saudável na beira da estrada? <b>Mas lembre-se de maneirar no sal.</b>
             <br>
           <ion-button fill="outline" expand="block" style="margin-top: 16px">VER NO MAPA</ion-button>
           <ion-button fill="outline" expand="block" style="margin-top: 16px">COMPARTILHAR</ion-button>
@@ -96,7 +92,7 @@ Que tal esse restaurante saudável na beira da estrada? <b>Mas lembre-se de mane
             <ion-icon name="cloudy-night-outline" slot="start" style="margin-bottom: 8px; width: 64px; height: 64px"></ion-icon>
             <br>Parece que você não dorme
             a mais de 12 horas.
-            <br>Eu me preocupo com você amigão...</ion-card-content>
+            <br>Sono no volante pode ser fatal, eu me preocupo com você amigão...</ion-card-content>
         </ion-card>
       </li>
       <li class="event">
@@ -112,6 +108,18 @@ Que tal esse restaurante saudável na beira da estrada? <b>Mas lembre-se de mane
           <ion-card-content>
             Cuidando da saúde dos caminhoneiros nas estradas pelo Brasil. Que tal aproveitar para medir sua pressão?
             <ion-button fill="outline" expand="block" slot="end" style="margin-top: 16px">VER NO MAPA</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </li>
+
+      <li class="event">
+        <p>Cidade Z, SP 2 dias atrás</p>
+        <ion-card>
+          <ion-card-content>
+            <ion-icon name="sunny-outline" slot="start" style="margin-bottom: 8px; width: 64px; height: 64px"></ion-icon>
+            <br>
+            Que dia quente! <br>
+            Tente beber mais líquido hoje, Jorge :)
           </ion-card-content>
         </ion-card>
       </li>

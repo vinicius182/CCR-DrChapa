@@ -46,7 +46,7 @@
         <ion-input type="number" [(ngModel)]="form.height" name="height"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>VOCÊ PATRICA EXERCÍCIOS FÍSICOS</ion-label>
+        <ion-label>PRATICA EXERCÍCIOS?</ion-label>
         <ion-select [(ngModel)]="form.exercises" name="exercises">
           <ion-select-option value="1">Sim</ion-select-option>
           <ion-select-option value="2">Não</ion-select-option>
@@ -55,7 +55,7 @@
       <ion-button expand="block" color="success" (click)="nextStep()"  class="btnSuccess">CONTINUAR CADASTRO</ion-button>
     </form>
     <form *ngIf="step == 3">
-      <ion-label>MARQUE OS ÍTENS ABAIXO QUE VOCÊ SE IDENTICA</ion-label>
+      <ion-label>MARQUE OS ÍTENS QUE VOCÊ SE IDENTICA</ion-label>
       <!-- <ion-list  *ngFor="let item of itemCheck; let i = index">
         <ion-item>
           <ion-label>{{item.title}}</ion-label>
@@ -96,17 +96,19 @@
     </form>
     <form *ngIf="step == 4">
       <ion-item>
-        <ion-label>VOCÊ É FUMANTE?</ion-label>
+        <ion-label>VOCÊ FUMA?</ion-label>
         <ion-select [(ngModel)]="form.smoker" name="smoker">
-          <ion-select-option value="1">Sim</ion-select-option>
-          <ion-select-option value="2">Não</ion-select-option>
+          <ion-select-option value="1">EU NÃO FUMO</ion-select-option>
+          <ion-select-option value="2">FUMO SOCIALMENTE</ion-select-option>
+          <ion-select-option value="3">FUMO DIARIAMENTE</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
-        <ion-label>VOCÊ CONSOME BEBIDA ALCOÓLICA?</ion-label>
+        <ion-label>CONSOME BEBIDA ALCOÓLICA?</ion-label>
           <ion-select [(ngModel)]="form.alcohol" name="alcohol">
-            <ion-select-option value="1">Sim</ion-select-option>
-            <ion-select-option value="2">Não</ion-select-option>
+            <ion-select-option value="1">EU NÃO BEBO</ion-select-option>
+            <ion-select-option value="2">BEBO SOCIALMENTE</ion-select-option>
+            <ion-select-option value="2">BEBO DIARIAMENTE</ion-select-option>
           </ion-select>
       </ion-item>
       <ion-button expand="block" color="success" (click)="logForm()" class="btnSuccess">TERMINAR CADASTRO</ion-button>
