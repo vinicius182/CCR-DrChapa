@@ -20,6 +20,7 @@ const { PushNotifications } = Plugins;
 })
 export class ViagemPage implements OnInit {
   viagemIniciada : any;
+  token: any;
   information: any = {};
 
   constructor(public alertController: AlertController,
@@ -34,6 +35,8 @@ export class ViagemPage implements OnInit {
     }
 
   ngOnInit() {
+
+    
     this.http.get('assets/information.json')
     .subscribe(res => {
       this.information = res['items'][0].children[0];
@@ -41,14 +44,13 @@ export class ViagemPage implements OnInit {
 
     PushNotifications.requestPermission().then( result => {
       if (result.granted) {
-
         PushNotifications.register();
       } 
     });
 
     PushNotifications.addListener('registration',
       (token: PushNotificationToken) => {
-        alert('Push registration success, token: ' + token.value);
+       this.token= token.value;
         //enviar token para a API
       }
     );
@@ -92,7 +94,7 @@ export class ViagemPage implements OnInit {
         }
       ]
     });
-
+ 
     await alert.present();
   }
 
