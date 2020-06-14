@@ -31,6 +31,9 @@ export class AuthenticationService {
    }
 
    login() {
+
+
+    /*
     var headers = new HttpHeaders({
       'Content-Type' : 'application/json; charset=utf-8',
         'Accept': 'application/json, text/plain',
@@ -59,15 +62,17 @@ export class AuthenticationService {
        })
      })
 
+    */
+
     // DESCOMENTAR E COMENTAR AS COISAS DE CIMA CASO LOGIN NAO FUNCIONE 
-    //  var dummy_response = {
-    //   user_id: '007',
-    //   user_name: 'test'
-    //   };
-    //   this.storage.set('USER_INFO', dummy_response).then((response) => {
-    //     this.router.navigate(['dashboard']);
-    //     this.authState.next(true);
-    //   });
+      var dummy_response = {
+      user_id: '007',
+      user_name: 'test'
+      };
+      this.storage.set('USER_INFO', dummy_response).then((response) => {
+        this.router.navigate(['dashboard']);
+        this.authState.next(true);
+      });
    }
 
    logout() {

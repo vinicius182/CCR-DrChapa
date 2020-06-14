@@ -59,7 +59,7 @@ export class ViagemPage implements OnInit {
   async alertCancelar(){
     const alert = await this.alertController.create({
       header: 'PARAR DE ACOMPANHAR',
-      message: 'Ao parar, não irei mais enviar notificações de saúde e bem estar durante a viagem.',
+      message: 'Ao parar, não irei mais enviar notificações de saúde e bem estar durante suas viagens.',
       buttons: [
         {
           text: 'VOLTAR',

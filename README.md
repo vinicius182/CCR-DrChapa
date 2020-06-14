@@ -1,3 +1,3 @@
-# Vida na Estrada (Front)
+# DR. CHAPA (Front)
 
-Vida na Estrada é um projeto desenvolvido pelo time 244 no Hackathon CCR organizado pela Shawee.
+DR. CHAPA é um projeto desenvolvido pelo time 244 no Hackathon CCR organizado pela Shawee.
