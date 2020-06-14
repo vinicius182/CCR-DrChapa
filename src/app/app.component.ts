@@ -103,8 +103,8 @@ export class AppComponent {
     );
 
     PushNotifications.addListener('pushNotificationActionPerformed',
-      (notification: PushNotificationActionPerformed) => {
-        alert('Push action performed: ' + JSON.stringify(notification));
+      (data: PushNotificationActionPerformed) => {
+        alert(JSON.stringify(data.notification.data.content));
       }
     );
   }
