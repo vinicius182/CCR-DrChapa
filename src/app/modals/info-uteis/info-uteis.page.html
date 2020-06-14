@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar  class="menu-superior">
-    <ion-title>Telefones Perto</ion-title>
+    <ion-title>TELEFONES PRÓXIMOS</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="closeModal()">Fechar</ion-button>
     </ion-buttons>
@@ -8,6 +8,12 @@
 </ion-header>
 
 <ion-content>
+  <ion-item-divider>
+    <ion-label>
+      3 TELEFONES ÚTEIS ENCONTRADOS...
+    </ion-label>
+  </ion-item-divider>
+
   <ion-list *ngFor="let item of concessionarias; let i = index;">
     <ion-item>
       <ion-thumbnail slot="start">
