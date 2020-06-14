@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, NavController } from '@ionic/angular';
 import { FretePage } from '../frete/frete.page';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-viagem',
@@ -8,9 +10,25 @@ import { FretePage } from '../frete/frete.page';
   styleUrls: ['./viagem.page.scss'],
 })
 export class ViagemPage implements OnInit {
-  constructor(public alertController: AlertController, public navCtrl: NavController) { }
+  viagemIniciada : any;
+  information: any = {};
+
+  constructor(public alertController: AlertController,
+              public navCtrl: NavController, 
+              private route: ActivatedRoute,
+              private http: HttpClient) 
+    { 
+      this.route.queryParams
+      .subscribe((data) => {
+        this.viagemIniciada = data['iniciou']
+      })
+    }
 
   ngOnInit() {
+    this.http.get('assets/information.json')
+    .subscribe(res => {
+      this.information = res['items'][0].children[0];
+    });
   }
 
   async alertCalculo() {

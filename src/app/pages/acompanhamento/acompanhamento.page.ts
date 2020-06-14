@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acompanhamento',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AcompanhamentoPage implements OnInit {
   information: any[];
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, private router: Router) { 
     this.http.get('assets/information.json').subscribe(res => {
       this.information = res['items'];
 
@@ -21,5 +22,9 @@ export class AcompanhamentoPage implements OnInit {
 
   toggleSection(index) {
     this.information[index].open = !this.information[index].open;
+  }
+
+  goToViagem(viagemIniciada){
+    this.router.navigate(['/tabs/viagem'], {queryParams:{iniciou:viagemIniciada}});
   }
 }
