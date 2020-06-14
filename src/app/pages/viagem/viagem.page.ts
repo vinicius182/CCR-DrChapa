@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, ModalController } from '@ionic/angular';
 import { FretePage } from '../frete/frete.page';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
+import { InfoUteisPage } from '../../modals/info-uteis/info-uteis.page';
 
 @Component({
   selector: 'app-viagem',
@@ -17,7 +17,8 @@ export class ViagemPage implements OnInit {
   constructor(public alertController: AlertController,
               public navCtrl: NavController, 
               private route: ActivatedRoute,
-              private http: HttpClient) 
+              private http: HttpClient,
+              private modalController: ModalController) 
     { 
       this.route.queryParams
       .subscribe((data) => {
@@ -26,8 +27,6 @@ export class ViagemPage implements OnInit {
     }
 
   ngOnInit() {
-
-    
     this.http.get('assets/information.json')
     .subscribe(res => {
       this.information = res['items'][0].children[0];
@@ -78,6 +77,13 @@ export class ViagemPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: InfoUteisPage
+    });
+    return await modal.present();
   }
 
 }

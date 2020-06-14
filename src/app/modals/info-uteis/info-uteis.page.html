@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar  class="menu-superior">
+    <ion-title>Telefones Perto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of concessionarias; let i = index;">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <div class="thumb">
+          <ion-icon name="call">LIGAR</ion-icon>
+        </div>
+      </ion-thumbnail>
+      <ion-label>
+        <h3><b>{{ item.title }}</b></h3>
+        <p>{{ item.telefone }}</p> 
+      </ion-label>
+    </ion-item>  
+  </ion-list>
+</ion-content>

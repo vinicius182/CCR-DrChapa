@@ -4,24 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ViagemPageRoutingModule } from './viagem-routing.module';
+import { InfoUteisPageRoutingModule } from './info-uteis-routing.module';
 
-import { ViagemPage } from './viagem.page';
+import { InfoUteisPage } from './info-uteis.page';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedComponentsModule } from 'src/app/components/shared-components/shared-components.module';
-
-import { InfoUteisPage } from '../../modals/info-uteis/info-uteis.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ViagemPageRoutingModule,
+    InfoUteisPageRoutingModule,
     HttpClientModule,
     SharedComponentsModule
   ],
-  declarations: [ViagemPage, InfoUteisPage],
-  entryComponents: [InfoUteisPage]
+  declarations: [InfoUteisPage]
 })
-export class ViagemPageModule {}
+export class InfoUteisPageModule {}
