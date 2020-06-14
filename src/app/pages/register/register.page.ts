@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -35,7 +36,7 @@ export class RegisterPage implements OnInit {
       id: '6'
     },
   ]
-  constructor() { 
+  constructor(public navCtrl: NavController) { 
   }
 
   ngOnInit() {
@@ -47,6 +48,9 @@ export class RegisterPage implements OnInit {
 
   logForm() {
     console.log(this.form)
+
+    this.navCtrl.navigateForward('login')
+
   }
 
 }
