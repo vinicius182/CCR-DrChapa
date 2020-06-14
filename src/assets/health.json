@@ -5,28 +5,28 @@
             "type": "1",  
             "children": [
                 {
-                    "color": "success",
+                    "color": "green",
                     "title" : "REDUZA O SAL NA ALIMENTAÇÃO",
                     "description" : "OMS recomenda o consumo diário de sal menor que 5g."
                 },
                 {
-                    "color": "success",
-                    "title" : "REDUZA SEU CONSUMO DE ÁLCOOL",
-                    "description" : "Recomenda-se que não beba bebidas alcóolicas constantemente."
+                    "color": "green",
+                    "title" : "REDUZA O CONSUMO DE ÁLCOOL",
+                    "description" : "Recomenda-se beber menos de 2 dores diárias."
                 }
             ]
         },
         {
-            "name": "DICAS DE EXERCÍCIOS",
+            "name": "DICAS DE ALONGAMENTO",
             "type": "2",
             "children":[
                 {
-                    "color" : "primary",
+                    "color" : "green",
                     "title" : "EXERCÍCIO RÁPIDO PARA OS PÉS",
-                    "description" : "Fique em pé, levante o calcanha até que você ficque apoiado com seus dedos."
+                    "description" : "Fique em pé, levante o calcanha até que você fique apoiado com seus dedos."
                 },
                 {
-                    "color" : "primary",
+                    "color" : "green",
                     "title" : "EXERCÍCIO RÁPIDO PARA OS PÉS",
                     "description" : "Fique sentado, estique suas pernas e levante o pé para cima e para baixo."
                 }

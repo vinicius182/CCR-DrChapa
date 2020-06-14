@@ -27,7 +27,7 @@ export class RegisterPage implements OnInit {
       id: '4'
     },
     {
-      title: 'INXAÇO NOS PÉS E/OU PERNAS',
+      title: 'INCHAÇO NOS PÉS E/OU PERNAS',
       id: '5'
     },
     {

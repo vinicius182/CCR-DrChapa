@@ -10,23 +10,25 @@
 
 <ion-content *ngIf="viagemIniciada == undefined || viagemIniciada == false">
   <div class="container">
-    <ion-icon name="heart-half-outline" class="ion-iconHeart ion-align-items-start"></ion-icon>
-    <h2><b>POSSO TE ACOMPANHAR <br/>NESSA VIAGEM?</b></h2>
-    <ion-item>
-      <ion-label position="floating">LOCAL DE PARTIDA</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">LOCAL DE DESTINO</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+    <h1 style="margin-left: 16px"><b>OLÁ, JORGE<br/></b></h1>
+    <p style="margin-left: 16px">POSSO TE ACOMPANHAR HOJE?</p>
 
-    <ion-button expand="block" color="success" (click)="alertCalculo()" class="btnSuccess">ACOMPANHAR MINHA SAÚDE</ion-button>
+    <ion-list>
+    <ion-item>
+      <ion-label clearInput="true" clearOnEdit="true" color="primary" inputmode="text" position="floating">LOCAL DE PARTIDA</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label clearInput="true" clearOnEdit="true" color="primary" inputmode="text" position="floating">LOCAL DE DESTINO</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-button expand="block" color="success" (click)="alertCalculo()" class="btnSuccess">ACOMPANHAR MINHA VIAGEM</ion-button>
   </div>
 </ion-content>
 
 <ion-content *ngIf="viagemIniciada">
-      <ion-grid>
         <ion-row class="origemDestino">
           <ion-col size="6">
             <p>ORIGEM</p>    
@@ -37,21 +39,20 @@
             <p class="pSub">{{ information.destino }}</p>
           </ion-col>
         </ion-row>
+
         <ion-row>
-          <ion-col size="12">
-           <ion-button expand="block" style="min-height: 52px" (click)="alertCancelar()">CANCELAR ACOMPANHAMENTO</ion-button>
-          </ion-col>
+          <ion-card>
+            <ion-card-content>
+              <span class="cardInfoTop">BUSCANDO DICAS DE SAÚDE E BEM ESTAR DURANTE O TRAJETO...</span>
+            </ion-card-content>
+          </ion-card>
         </ion-row>
-      </ion-grid>
+
+  <ion-col size="12" style="margin-top: 64px">
+    <ion-button expand="full" style="min-height: 52px" (click)="alertCancelar()">CANCELAR ACOMPANHAMENTO</ion-button>
+  </ion-col>
 
   <ion-item-divider></ion-item-divider>
-
-  <ion-card>
-    <ion-card-content>
-      <span class="cardInfoTop"><b>JOSÉ,</b> ESTOU BUSCANDO DICAS DE SAÚDE E BEM ESTAR PARA VOCÊ...</span>
-    </ion-card-content>
-  </ion-card>
-
 
   <div id="timeline=content">
     <ul class="timeline">
@@ -92,8 +93,8 @@ Que tal esse restaurante saudável na beira da estrada? <b>Mas lembre-se de mane
         <p>Ribeirao Preto, SP - 10 minutos atrás</p>
         <ion-card>
           <ion-card-content>
-            <ion-icon name="cloudy-night-outline" slot="start" style="margin-bottom: 8px"></ion-icon>
-            Parece que você não dorme
+            <ion-icon name="cloudy-night-outline" slot="start" style="margin-bottom: 8px; width: 64px; height: 64px"></ion-icon>
+            <br>Parece que você não dorme
             a mais de 12 horas.
             <br>Eu me preocupo com você amigão...</ion-card-content>
         </ion-card>
@@ -110,7 +111,7 @@ Que tal esse restaurante saudável na beira da estrada? <b>Mas lembre-se de mane
         </ion-row>
           <ion-card-content>
             Cuidando da saúde dos caminhoneiros nas estradas pelo Brasil. Que tal aproveitar para medir sua pressão?
-            <ion-button fill="outline" expand="block" slot="end" style="margin-top: 16px">ACEITAR DESAFIO</ion-button>
+            <ion-button fill="outline" expand="block" slot="end" style="margin-top: 16px">VER NO MAPA</ion-button>
           </ion-card-content>
         </ion-card>
       </li>
