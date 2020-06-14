@@ -25,7 +25,7 @@
             ] 
         },
         {
-            "name": "ESTIMATIVA MEU CUSTO",
+            "name": "CUSTO ESTIMADO DE FRETE",
             "type": "3",
             "children":[
                 {

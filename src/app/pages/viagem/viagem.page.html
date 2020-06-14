@@ -7,7 +7,7 @@
 <ion-content *ngIf="viagemIniciada == undefined">
   <div class="container">
     <ion-icon name="heart-half-outline" class="ion-align-items-start"></ion-icon>
-    <h2><b>POSSO TE ACOMPANHAR TOKEN BOLADO {{ token }} <br/> NESSA VIAGEM?</b></h2>
+    <h2><b>POSSO TE ACOMPANHAR {{ token }} <br/>NESSA VIAGEM?</b></h2>
     <ion-item>
       <ion-label position="floating">LOCAL DE PARTIDA</ion-label>
       <ion-input type="text"></ion-input>
@@ -33,10 +33,9 @@
             <p class="pSub">{{ information.destino }}</p>
           </ion-col>
         </ion-row>
-
         <ion-row>
           <ion-col size="12">
-            <p class="btnLabel">CANCELAR ACOMPANHAMENTO</p>
+           <ion-button expand="block" style="min-height: 52px">CANCELAR ACOMPANHAMENTO</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -45,7 +44,7 @@
 
   <ion-card>
     <ion-card-content>
-      <span class="cardInfoTop">JOSÉ! ESTOU AQUI PARA TE AJUDAR EM SUAS VIAGENS.</span>
+      <span class="cardInfoTop"><b>JOSÉ!</b> ESTOU BUSCANDO DICAS DE SAÚDE E BEM ESTAR PARA VOCÊ.</span>
     </ion-card-content>
   </ion-card>
 
@@ -53,16 +52,14 @@
   <div id="timeline=content">
     <ul class="timeline">
       <li class="event">
-        <p>Ribeirao Preto, SP 10 minutos atrás</p>
+        <p>Ribeirao Preto, SP - 10 minutos atrás</p>
         <ion-card>
           <ion-card-header>
             <ion-img style="width: 100%; height: 100px; margin-top: -8px;" src="../../../assets/imgs/timeLine/01.jpg"></ion-img>
             <ion-card-title>JÁ SE ALONGOU HOJE?</ion-card-title>
           </ion-card-header>
-          <ion-row>
-            <ion-col size="12">
+          <ion-row style="margin-left: 8px">
               <p class="btnLabel" style="font-size: 14px; margin-left: 8px!important;">PLANO DE CUIDADO</p>
-            </ion-col>
           </ion-row>
           <ion-card-content>
             É muito importante se alongar durante viagens longas. <b>Que tal fazer uma parada rápida e esticar as pernas?</b> :)
@@ -78,8 +75,8 @@
             <ion-card-title>RESTAURANTE VALE DO...</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            Jorge, você já almoçou ?
-Que tal esse restaurante saudável na beira da estrada? <b>Mas no seu caso lembre-se de maneirar no sal!</b>
+            Já almoçou?
+Que tal esse restaurante saudável na beira da estrada? <b>Mas lembre-se de maneirar no sal.</b>
             <br>
           <ion-button fill="outline" expand="block" style="margin-top: 16px">VER NO MAPA</ion-button>
           <ion-button fill="outline" expand="block" style="margin-top: 16px">COMPARTILHAR</ion-button>
@@ -88,11 +85,11 @@ Que tal esse restaurante saudável na beira da estrada? <b>Mas no seu caso lembr
         </ion-card>
       </li>
       <li class="event">
-        <p>Ribeirao Preto, SP 10 minutos atrás</p>
+        <p>Ribeirao Preto, SP - 10 minutos atrás</p>
         <ion-card>
           <ion-card-content>
             <ion-icon name="cloudy-night-outline" slot="start" style="margin-bottom: 8px"></ion-icon>
-            Jorge, parece que você não dorme
+            Parece que você não dorme
             a mais de 12 horas.
             <br>Eu me preocupo com você amigão...</ion-card-content>
         </ion-card>
@@ -104,11 +101,9 @@ Que tal esse restaurante saudável na beira da estrada? <b>Mas no seu caso lembr
             <ion-img style="width: 100%; height: 100px; margin-top: -8px;" src="../../../assets/imgs/timeLine/03.jpg"></ion-img>
             <ion-card-title>GRUPO CCR - ESTRADA ...</ion-card-title>
           </ion-card-header>
-          <ion-row>
-            <ion-col size="12">
-              <p class="btnLabel" style="font-size: 14px; margin-left: 8px!important;">PLANO DE CUIDADO</p>
-            </ion-col>
-          </ion-row>
+          <ion-row style="margin-left: 8px">
+            <p class="btnLabel" style="font-size: 14px; margin-left: 8px!important;">PLANO DE CUIDADO</p>
+        </ion-row>
           <ion-card-content>
             Cuidando da saúde dos caminhoneiros nas estradas pelo Brasil. Que tal aproveitar para medir sua pressão?
             <ion-button fill="outline" expand="block" slot="end" style="margin-top: 16px">ACEITAR DESAFIO</ion-button>

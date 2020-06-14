@@ -42,3 +42,17 @@
     margin-top: 40px;
     padding: 0 16px 0 16px;
   }
+
+  ion-card{
+    box-shadow: none !important;
+    border-style: solid !important;
+    border: 1px;
+    border-color: #ECECEC !important;
+    border-radius: 4px;
+
+    ion-card-content{
+      color: #222222;
+    }
+
+
+  }
