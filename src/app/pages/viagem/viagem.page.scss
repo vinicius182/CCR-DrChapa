@@ -3,6 +3,15 @@ h2{
     font-size: 18px;
 }
 
+.pSub{
+  font-weight: bold !important;
+  color: #222222;
+}
+
+.origemDestino{
+  margin: 0 8px 0px 8px;
+}
+
 ion-icon{
     height: 64px;
     width: 64px;
@@ -21,20 +30,24 @@ ion-icon{
     border-top-right-radius: 4px;    
     background: fade(white, 3%);
     color: fade(white, 80%); 
-    margin: 50px 0 50px 50px;  
-    letter-spacing: 0.5px;   
+    margin: 32px 0 50px 24px;
+    letter-spacing: 0.5px;
     position: relative;
     line-height: 1.4em;
-    font-size: 1.03em;   
+    font-size: 1.03em;
     padding: 10px;   
     list-style: none;
     text-align: left;  
-    font-weight: 100;  
+    font-weight: 100;
+    
+    p{
+      margin-left: 8px;
+    }
     
     .event {
         border-bottom: 1px dashed fade(white, 10%);
         padding-bottom: (50px * 0.5);
-        margin-bottom: 50px;  
+        margin-bottom: 16px;  
         position: relative;
     
         &:last-of-type { 
@@ -51,7 +64,7 @@ ion-icon{
         &:after {
           left: (10px + 4px + (22px * 0.35)) * -1;        
           background: lighten(#01C853,5%);    
-          border-radius: 50%;  
+          border-radius: 50%;
           height: 20px;
           width: 20px;
           content: "";
