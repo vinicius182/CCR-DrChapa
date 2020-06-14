@@ -14,6 +14,10 @@ const routes: Routes = [
             {
                 path: 'saude',
                 loadChildren: () => import('../saude/saude.module').then(m => m.SaudePageModule)
+            },
+            {
+                path: 'cupom',
+                loadChildren: () => import('../cupons/cupons.module').then(m => m.CuponsPageModule)
             }
         ]
     },

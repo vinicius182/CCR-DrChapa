@@ -18,6 +18,13 @@ h2{
   color: #222222;
 }
 
+.buttonBadge{
+  --background: #ffffff;
+  --color: #FFB900;
+    border-radius: 50%;
+
+}
+
 ion-card{
   box-shadow: none !important;
   border-style: solid !important;
@@ -36,11 +43,28 @@ ion-card{
   font-size: 16px;
 }
 
-ion-icon{
+.ion-iconHeart{
     height: 64px;
     width: 64px;
     margin: auto;
     display: block;
+}
+
+#notification-button {            
+  position: relative;
+  width: 42px;
+  top:1px;
+  right: 1px;
+  overflow: visible!important;
+}
+
+
+#notifications-badge {
+  background-color: red;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  border-radius: 100%;
 }
 
 #timeline-content {

@@ -44,23 +44,23 @@ export class AuthenticationService {
         "Access-Control-Allow-Methods" : "GET, POST, DELETE, PUT, OPTIONS, TRACE, PATCH, CONNECT",  
     });
 
-     var loginForm = {
-      username: '44992687883',
-      password: '123'
-     };
+  //    var loginForm = {
+  //     username: '44992687883',
+  //     password: '123'
+  //    };
 
-     let requestOptions = {
-      headers: headers
-   }
+  //    let requestOptions = {
+  //     headers: headers
+  //  }
 
-     this.httpClient.post('http://192.168.0.22:8080/api/v1/auth', loginForm, requestOptions)
-     .subscribe(data => {
-       console.log(data)
-       this.storage.set('USER_INFO', data).then((reponse) => {
-         this.router.navigate(['tabs/viagem']);
-         this.authState.next(true);
-       })
-     })
+  //    this.httpClient.post('http://192.168.0.22:8080/api/v1/auth', loginForm, requestOptions)
+  //    .subscribe(data => {
+  //      console.log(data)
+  //      this.storage.set('USER_INFO', data).then((reponse) => {
+  //        this.router.navigate(['tabs/viagem']);
+  //        this.authState.next(true);
+  //      })
+  //    })
 
     */
 
