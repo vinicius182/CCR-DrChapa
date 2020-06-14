@@ -97,8 +97,8 @@ export class AppComponent {
     );
 
     PushNotifications.addListener('pushNotificationReceived',
-      (notification: PushNotification) => {
-        alert('Push received: ' + JSON.stringify(notification));
+      (data: PushNotification) => {
+        alert(JSON.stringify(data.notification.data.content));
       }
     );
 
