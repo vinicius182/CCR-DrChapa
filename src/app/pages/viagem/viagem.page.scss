@@ -12,6 +12,30 @@ h2{
   margin: 0 8px 0px 8px;
 }
 
+.cardInfoTop{
+  font-weight: 700px;
+  font-size: 16px;
+  color: #222222;
+}
+
+ion-card{
+  box-shadow: none !important;
+  border-style: solid !important;
+  border: 1px;
+  border-color: #ECECEC !important;
+  border-radius: 4px;
+
+  ion-card-content{
+    font-size: 16px;
+  }
+}
+
+.btnLabel{
+  color: #4889F6; 
+  margin: 0 0 0 8px;
+  font-size: 16px;
+}
+
 ion-icon{
     height: 64px;
     width: 64px;
