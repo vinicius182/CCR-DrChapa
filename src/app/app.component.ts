@@ -4,6 +4,18 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { HttpClient, HttpHeaders  } from '@angular/common/http';
+
+import {
+  Plugins,
+  PushNotification,
+  PushNotificationToken,
+  PushNotificationActionPerformed } from '@capacitor/core';
+
+
+const { PushNotifications } = Plugins;
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -13,15 +25,72 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private httpClient: HttpClient,
+    private messageToken: any
   ) {
     this.initializeApp();
   }
+
+  registerNotificationToken() {
+      var headers = new HttpHeaders({
+        'Content-Type' : 'application/json; charset=utf-8',
+      });
+
+      headers = headers.append('notificationToken', this.messageToken);
+
+      let requestOptions = {
+        headers: headers
+     }
+
+      this.httpClient.post("http://192.168.0.22:8080/api/v1/notification/register", null, requestOptions)
+      .subscribe(data => {
+        console.log(data);
+       }, error => {
+        console.log(error);
+      });
+
+    }
+
+
 
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+
+    PushNotifications.requestPermission().then( result => {
+      if (result.granted) {
+        PushNotifications.register();
+      } 
+    });
+
+    PushNotifications.addListener('registration',
+      (token: PushNotificationToken) => {
+         this.messageToken =  token.value;
+         this.registerNotificationToken();
+        //enviar token para a API
+      }
+    );
+
+    PushNotifications.addListener('registrationError',
+      (error: any) => {
+        alert('Error on registration: ' + JSON.stringify(error));
+      }
+    );
+
+    PushNotifications.addListener('pushNotificationReceived',
+      (notification: PushNotification) => {
+        alert('Push received: ' + JSON.stringify(notification));
+      }
+    );
+
+    PushNotifications.addListener('pushNotificationActionPerformed',
+      (notification: PushNotificationActionPerformed) => {
+        alert('Push action performed: ' + JSON.stringify(notification));
+      }
+    );
   }
 }

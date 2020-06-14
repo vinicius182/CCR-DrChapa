@@ -5,14 +5,6 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 
-import {
-  Plugins,
-  PushNotification,
-  PushNotificationToken,
-  PushNotificationActionPerformed } from '@capacitor/core';
-
-const { PushNotifications } = Plugins;
-
 @Component({
   selector: 'app-viagem',
   templateUrl: './viagem.page.html',
@@ -20,7 +12,6 @@ const { PushNotifications } = Plugins;
 })
 export class ViagemPage implements OnInit {
   viagemIniciada : any;
-  token: any;
   information: any = {};
 
   constructor(public alertController: AlertController,
@@ -41,37 +32,6 @@ export class ViagemPage implements OnInit {
     .subscribe(res => {
       this.information = res['items'][0].children[0];
     });
-
-    PushNotifications.requestPermission().then( result => {
-      if (result.granted) {
-        PushNotifications.register();
-      } 
-    });
-
-    PushNotifications.addListener('registration',
-      (token: PushNotificationToken) => {
-       this.token= token.value;
-        //enviar token para a API
-      }
-    );
-
-    PushNotifications.addListener('registrationError',
-      (error: any) => {
-        alert('Error on registration: ' + JSON.stringify(error));
-      }
-    );
-
-    PushNotifications.addListener('pushNotificationReceived',
-      (notification: PushNotification) => {
-        alert('Push received: ' + JSON.stringify(notification));
-      }
-    );
-
-    PushNotifications.addListener('pushNotificationActionPerformed',
-      (notification: PushNotificationActionPerformed) => {
-        alert('Push action performed: ' + JSON.stringify(notification));
-      }
-    );
   }
 
   async alertCalculo() {
