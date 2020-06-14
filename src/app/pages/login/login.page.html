@@ -15,7 +15,7 @@
       <ion-label position="floating">SENHA</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    <ion-button expand="block" color="success" class="btnSuccess">ENTRAR NA CONTA</ion-button>
-    <ion-button expand="block" color="success" class="btnSuccess" fill="outline">ENTRAR NA CONTA</ion-button>
+    <ion-button expand="block" color="success" (click)="login()" class="btnSuccess">ENTRAR NA CONTA</ion-button>
+    <ion-button expand="block" color="success" (click)="register()" class="btnSuccess" fill="outline">CRIAR UMA CONTA</ion-button>
   </div>
 </ion-content>

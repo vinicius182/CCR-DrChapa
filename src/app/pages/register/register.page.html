@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar class="menu-superior"> 
+    <ion-title *ngIf="step == 1">Dados Básicos</ion-title>
+    <ion-title *ngIf="step == 2">Saúde Física</ion-title>
+    <ion-title *ngIf="step == 3">Histórico de Saúde</ion-title>
+    <ion-title *ngIf="step == 4">Hábitos</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form *ngIf="step == 1">
+      <ion-item>
+        <ion-label position="floating">QUAL SEU NOME?</ion-label>
+        <ion-input type="text" [(ngModel)]="form.name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">QUAL SUA IDADE?</ion-label>
+        <ion-input type="number" [(ngModel)]="form.age" name="age"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>SELECIONE SEU GÊNERO</ion-label>
+        <ion-select [(ngModel)]="form.gender" name="gender">
+          <ion-select-option value="1">Feminino</ion-select-option>
+          <ion-select-option value="2">Masculino</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">QUAL SEU CPF?</ion-label>
+        <ion-input type="number" [(ngModel)]="form.cpf" name="cpf"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">INSIRA SUA SENHA</ion-label>
+        <ion-input type="password" [(ngModel)]="form.password" name="password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="success" (click)="nextStep()"  class="btnSuccess">CONTINUAR CADASTRO</ion-button>
+    </form>
+    <form *ngIf="step == 2">
+      <ion-item>
+        <ion-label position="floating">QUAL SEU PESO ATUAL?</ion-label>
+        <ion-input type="number" [(ngModel)]="form.weight" name="weight"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">QUAL SUA ALTURA?</ion-label>
+        <ion-input type="number" [(ngModel)]="form.height" name="height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>VOCÊ PATRICA EXERCÍCIOS FÍSICOS</ion-label>
+        <ion-select [(ngModel)]="form.exercises" name="exercises">
+          <ion-select-option value="1">Sim</ion-select-option>
+          <ion-select-option value="2">Não</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button expand="block" color="success" (click)="nextStep()"  class="btnSuccess">CONTINUAR CADASTRO</ion-button>
+    </form>
+    <form *ngIf="step == 3">
+      <ion-label>MARQUE OS ÍTENS ABAIXO QUE VOCÊ SE IDENTICA</ion-label>
+      <!-- <ion-list  *ngFor="let item of itemCheck; let i = index">
+        <ion-item>
+          <ion-label>{{item.title}}</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.health" [ngModelOptions]="{standalone: true}" ></ion-checkbox>
+        </ion-item>
+      </ion-list> -->
+      <ion-list>
+        <ion-item>
+          <ion-label>PRESSÃO ALTA</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.pressao" [ngModelOptions]="{standalone: true}" ></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>PROBLEMAS DE VISÃO</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.visao" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>DORES DE CABEÇA FREQUENTES</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.cabeca"[ngModelOptions]="{standalone: true}" ></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>DORES NA COLUNA E/OU CORPO</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.colunaCorpo" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>INXAÇO NOS PÉS E/OU PERNAS</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.pePernas" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>ESTRESSE</ion-label>
+          <ion-checkbox color="success" slot="start" [(ngModel)]="form.estresse" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-item>
+        <ion-label position="floating">OUTRO PROBLEMA</ion-label>
+        <ion-input type="text" [(ngModel)]="form.otherProblem" name="otherProblem"></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="success" (click)="nextStep()"  class="btnSuccess">CONTINUAR CADASTRO</ion-button>
+    </form>
+    <form *ngIf="step == 4">
+      <ion-item>
+        <ion-label>VOCÊ É FUMANTE?</ion-label>
+        <ion-select [(ngModel)]="form.smoker" name="smoker">
+          <ion-select-option value="1">Sim</ion-select-option>
+          <ion-select-option value="2">Não</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>VOCÊ CONSOME BEBIDA ALCÓOLICA?</ion-label>
+          <ion-select [(ngModel)]="form.alcohol" name="alcohol">
+            <ion-select-option value="1">Sim</ion-select-option>
+            <ion-select-option value="2">Não</ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-button expand="block" color="success" (click)="logForm()" class="btnSuccess">TERMINAR CADASTRO</ion-button>
+    </form>
+  </div>
+</ion-content>
