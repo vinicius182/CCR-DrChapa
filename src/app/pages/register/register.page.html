@@ -1,5 +1,15 @@
 <ion-header>
-  <ion-toolbar class="menu-superior"> 
+  <ion-toolbar class="menu-superior">
+    <ion-buttons slot="start" *ngIf="step == 1">
+      <ion-button (click)="backRegister()">
+        <ion-icon name="arrow-back" style="color: white !important;"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+    <ion-buttons slot="start" *ngIf="step > 1">
+      <ion-button (click)="previousStep()">
+        <ion-icon name="arrow-back" style="color: white !important;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title *ngIf="step == 1">Dados Básicos</ion-title>
     <ion-title *ngIf="step == 2">Saúde Física</ion-title>
     <ion-title *ngIf="step == 3">Histórico de Saúde</ion-title>

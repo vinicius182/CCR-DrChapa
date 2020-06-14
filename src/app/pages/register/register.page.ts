@@ -43,7 +43,16 @@ export class RegisterPage implements OnInit {
   }
 
   nextStep() {
-    this.step++   
+    this.step++;   
+  }
+
+  previousStep(){
+    this.step = this.step - 1;
+    console.log(this.step)
+  }
+
+  backRegister(){
+    this.navCtrl.back();
   }
 
   logForm() {

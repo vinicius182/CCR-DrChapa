@@ -4,15 +4,16 @@ import { ExpandableDetailsComponent } from '../expandable-details/expandable-det
 import { IonicModule } from '@ionic/angular';
 import { ExpandableHealthComponent } from '../expandable-health/expandable-health.component';
 import { ListCupomComponent } from '../list-cupom/list-cupom.component';
+import { NavTabsComponent } from '../nav-tabs/nav-tabs.component';
 
 
 
 @NgModule({
-  declarations: [ExpandableDetailsComponent, ExpandableHealthComponent, ListCupomComponent],
+  declarations: [ExpandableDetailsComponent, ExpandableHealthComponent, ListCupomComponent, NavTabsComponent],
   imports: [
     CommonModule,
     IonicModule
   ],
-  exports: [ExpandableDetailsComponent, ExpandableHealthComponent, ListCupomComponent]
+  exports: [ExpandableDetailsComponent, ExpandableHealthComponent, ListCupomComponent, NavTabsComponent]
 })
 export class SharedComponentsModule { }
