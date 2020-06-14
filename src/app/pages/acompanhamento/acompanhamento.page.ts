@@ -13,6 +13,7 @@ export class AcompanhamentoPage implements OnInit {
   constructor(private http: HttpClient, private router: Router) { 
     this.http.get('assets/information.json').subscribe(res => {
       this.information = res['items'];
+      console.log(this.information)
 
     });
   }

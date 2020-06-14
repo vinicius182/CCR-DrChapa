@@ -28,7 +28,7 @@
 
     <div *ngIf="item.children && item.open">
       <ion-list *ngFor="let child of item.children; let j = index" lines="none" class="child-list">
-        <app-expandable-details [product]="child"></app-expandable-details>
+        <app-expandable-details [product]="child" [type]="viagem"></app-expandable-details>
       </ion-list>
     </div>
   </ion-list>

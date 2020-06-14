@@ -1,11 +1,33 @@
 <ion-header>
   <ion-toolbar class="menu-superior">
-    <ion-title>Vida na Estrada</ion-title>
+    <ion-title>Dr. Estrada</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-card> 
+    <ion-card-content>
+     <b>JOSÉ!</b> CONFIRA AS DICAS QUE EU TROUXE COM BASE EM SEU PERFIL!
+    </ion-card-content>
+  </ion-card>
 
+  <ion-list *ngFor="let item of information; let i = index;" class="accordion-list ion-no-padding" lines="none" detail="false">
+    
+    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'accordion-item-alimentacao': item.type == 1, 'accordion-item-exercicios' : item.type == 2}">
+      <ion-icon slot="start" name="add-outline" color="white" *ngIf="!item.open"></ion-icon>
+      <ion-icon slot="start" name="remove-outline" color="white" *ngIf="item.open"></ion-icon>
+      <ion-label>
+        {{ item.name }}
+      </ion-label>
+    </ion-item>
+
+    <div *ngIf="item.children && item.open">
+      <ion-list *ngFor="let child of item.children; let j = index" lines="none" class="child-list">
+        <app-expandable-health [item]="child"></app-expandable-health>
+      </ion-list>
+    </div>
+
+  </ion-list>
 
 </ion-content>

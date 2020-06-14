@@ -9,6 +9,7 @@ export class ExpandableDetailsComponent implements OnInit {
   @Input('product') product: any;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

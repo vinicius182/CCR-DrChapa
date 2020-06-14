@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "name": "DICAS EXCLUSIVAS DE ALIMENTAÇÃO",     
+            "type": "1",  
+            "children": [
+                {
+                    "color": "success",
+                    "title" : "REDUZA O SAL NA ALIMENTAÇÃO",
+                    "description" : "OMS recomenda o consumo diário de sal menor que 5g."
+                },
+                {
+                    "color": "success",
+                    "title" : "REDUZA SEU CONSUMO DE ÁLCOOL",
+                    "description" : "Recomenda-se que não beba bebidas alcóolicas constantemente."
+                }
+            ]
+        },
+        {
+            "name": "DICAS DE EXERCÍCIOS",
+            "type": "2",
+            "children":[
+                {
+                    "color" : "primary",
+                    "title" : "EXERCÍCIO RÁPIDO PARA OS PÉS",
+                    "description" : "Fique em pé, levante o calcanha até que você ficque apoiado com seus dedos."
+                },
+                {
+                    "color" : "primary",
+                    "title" : "EXERCÍCIO RÁPIDO PARA OS PÉS",
+                    "description" : "Fique sentado, estique suas pernas e levante o pé para cima e para baixo."
+                }
+            ] 
+        }
+    ]
+}

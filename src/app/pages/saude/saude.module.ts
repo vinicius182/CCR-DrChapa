@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { SaudePageRoutingModule } from './saude-routing.module';
 
 import { SaudePage } from './saude.page';
+import { SharedComponentsModule } from 'src/app/components/shared-components/shared-components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SaudePageRoutingModule
+    SaudePageRoutingModule,
+    SharedComponentsModule,
+    HttpClientModule
   ],
   declarations: [SaudePage]
 })
