@@ -82,19 +82,41 @@ export class ViagemPage implements OnInit {
         {
           text: 'Não',
           handler: () => {
-            console.log('Não')
+            this.navCtrl.navigateForward('acompanhamento')
           }
         },
         {
           text: 'Sim',
           handler: () => {
-            console.log('Sim')
             this.navCtrl.navigateForward('frete')
           }
         }
       ]
     });
  
+    await alert.present();
+  }
+  async alertCancelar(){
+    const alert = await this.alertController.create({
+      header: 'PARAR DE ACOMPANHAR',
+      message: 'Ao parar, não irei mais enviar notificações de saúde e bem estar durante a viagem.',
+      buttons: [
+        {
+          text: 'VOLTAR',
+          handler: () => {
+            console.log('Não')
+          }
+        },
+        {
+          text: 'PARAR AGORA',
+          handler: () => {
+            console.log('Sim')
+            this.viagemIniciada = false;
+          }
+        }
+      ]
+    });
+
     await alert.present();
   }
 
