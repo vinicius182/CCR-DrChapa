@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { HttpClient, HttpHeaders  } from '@angular/common/http';
+
+import { AuthenticationService } from './services/authentication.service';
 
 import {
   Plugins,
@@ -26,7 +28,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private authenticationService: AuthenticationService,
+    public navCtrl: NavController
   ) {
     this.initializeApp();
   }
@@ -57,6 +61,13 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.authenticationService.authState.subscribe(state => {
+        if (state)
+        this.navCtrl.navigateForward('tabs/viagem');
+        else
+        this.navCtrl.navigateForward('login');
+      })
     });
 
 
