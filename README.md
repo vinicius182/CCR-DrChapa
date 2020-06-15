@@ -4,9 +4,9 @@ Dr Chapa é uma aplicação desenvolvida com Ionic, Angular e Capacitor durante 
 
 ## Screenshots
 
-![Screenshot]{screenshot/01.jpeg}
-![Screenshot]{screenshot/02.jpeg}
-![Screenshot]{screenshot/02.jpeg}
+![](https://github.com/vinicius182/CCR-DrChapa/blob/master/screenshots/01.jpeg)
+![](https://github.com/vinicius182/CCR-DrChapa/blob/master/screenshots/02.jpeg)
+![](https://github.com/vinicius182/CCR-DrChapa/blob/master/screenshots/03.jpeg)
 
 
 ## Construido com
