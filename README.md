@@ -2,6 +2,13 @@
 
 Dr Chapa é uma aplicação desenvolvida com Ionic, Angular e Capacitor durante o evento Hackathon CCR.
 
+## Screenshots
+
+![Screenshot]{screenshot/01.jpeg}
+![Screenshot]{screenshot/02.jpeg}
+![Screenshot]{screenshot/02.jpeg}
+
+
 ## Construido com
 
 * [Ionic 5](https://ionicframework.com/)
