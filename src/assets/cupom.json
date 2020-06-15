@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "title": "VALE 1 ALMOÇO",
+            "pontos": "300",
+            "endereco": "Rod. Régis Bittencourt",
+            "km": "Km 283 - 5 - Água Espraiada"    
+        },
+        {
+            "title": "VALE 1 BANHO",
+            "pontos": "200",
+            "endereco": "Rod. Régis Bittencourt",
+            "km": "Km 283 - 5 - Água Espraiada"    
+        }
+    ]
+}

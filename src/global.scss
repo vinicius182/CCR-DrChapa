@@ -24,3 +24,35 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.menu-superior {
+    --background: #067BBC;
+    --color: #FFFFFF;
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+
+
+  .btnSuccess{
+    margin-top: 32px;
+    min-height: 52px;
+}
+
+  .container{
+    margin-top: 40px;
+    padding: 0 16px 0 16px;
+  }
+
+  ion-card{
+    box-shadow: none !important;
+    border-style: solid !important;
+    border: 1px;
+    border-color: #ECECEC !important;
+    border-radius: 4px;
+
+    ion-card-content{
+      color: #222222;
+    }
+
+
+  }

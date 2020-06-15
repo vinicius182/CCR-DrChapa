@@ -1,18 +1,46 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
-];
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule),
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'saude',
+    loadChildren: () => import('./pages/saude/saude.module').then( m => m.SaudePageModule),
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'frete',
+    loadChildren: () => import('./pages/frete/frete.module').then( m => m.FretePageModule),
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'acompanhamento',
+    loadChildren: () => import('./pages/acompanhamento/acompanhamento.module').then( m => m.AcompanhamentoPageModule),
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'info-uteis',
+    loadChildren: () => import('./modals/info-uteis/info-uteis.module').then( m => m.InfoUteisPageModule)
+  }
 
+];
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

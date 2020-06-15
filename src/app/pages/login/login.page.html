@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="menu-superior">
+    <ion-title>DR. CHAPA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <img class="center-img" src="../../../assets/imgs/logo.png">
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">SENHA</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="success" (click)="login()" class="btnSuccess">ENTRAR NA CONTA</ion-button>
+    <ion-button expand="block" color="success" (click)="register()" class="btnSuccess" fill="outline">CRIAR UMA CONTA</ion-button>
+  </div>
+</ion-content>

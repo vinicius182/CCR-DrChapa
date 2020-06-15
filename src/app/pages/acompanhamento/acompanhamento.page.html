@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="menu-superior">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/viagem"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Resumo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let item of information; let i = index;" class="accordion-list ion-no-padding" lines="none" detail="false">
+
+    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'accordion-item-viagem': item.type == 1, 'accordion-item-saude' : item.type == 2, 'accordion-item-custo' : item.type == 3}">
+      <ion-icon slot="start" name="add-outline" *ngIf="!item.open"></ion-icon>
+      <ion-icon slot="start" name="remove-outline" *ngIf="item.open"></ion-icon>
+      <ion-label>
+        {{ item.name }}
+      </ion-label>
+    </ion-item>
+    
+
+    <div *ngIf="item.children && item.open">
+      <ion-list *ngFor="let child of item.children; let j = index" lines="none" class="child-list">
+        <app-expandable-details [product]="child" [type]="viagem"></app-expandable-details>
+      </ion-list>
+    </div>
+  </ion-list>
+
+  <ion-button expand="block" color="success" class="btnSuccess btnAcompanhar" (click)="goToViagem(true)">INICIAR VIAGEM</ion-button>
+
+</ion-content>

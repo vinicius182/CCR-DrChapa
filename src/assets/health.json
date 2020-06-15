@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "name": "DICAS EXCLUSIVAS DE ALIMENTAÇÃO",     
+            "type": "1",  
+            "children": [
+                {
+                    "color": "green",
+                    "title" : "REDUZA O SAL",
+                    "description" : "É recomendado o consumo de menos de 5 gramas de sal por dia."
+                },
+                {
+                    "color": "green",
+                    "title" : "REDUZA O CONSUMO DE ÁLCOOL",
+                    "description" : "Recomenda-se beber menos de 2 doses diárias."
+                }
+            ]
+        },
+        {
+            "name": "DICAS DE ALONGAMENTO",
+            "type": "2",
+            "children":[
+                {
+                    "color" : "green",
+                    "title" : "EXERCÍCIO RÁPIDO PARA OS PÉS",
+                    "description" : "Fique em pé, levante o calcanha até que você fique apoiado com seus dedos."
+                },
+                {
+                    "color" : "green",
+                    "title" : "EXERCÍCIO RÁPIDO PARA OS PÉS",
+                    "description" : "Fique sentado, estique suas pernas e levante o pé para cima e para baixo."
+                }
+            ] 
+        }
+    ]
+}

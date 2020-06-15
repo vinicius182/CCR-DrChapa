@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar class="menu-superior">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/viagem"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Insira a Carga</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list> 
+    <ion-item style="width: 100%">
+      <ion-label>Categoria do Transporte</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="1">CARGA LOTAÇÃO</ion-select-option>
+        <ion-select-option value="2">AUTOMOTOR DE CARGAS</ion-select-option>
+        <ion-select-option value="3">ALTO DESEMPENHO</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Tipo de Carga</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="1">GRANEL SÓLIDO</ion-select-option>
+        <ion-select-option value="2">GRANEL LÍQUIDO</ion-select-option>
+        <ion-select-option value="2">FRIGORIFICADA</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Quantidade de Eixos</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="success" (click)="changePage()" class="btnSuccess">Continuar</ion-button>
+</ion-content>

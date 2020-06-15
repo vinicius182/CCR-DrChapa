@@ -1,0 +1,48 @@
+<ion-item *ngIf="product.type == 1">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p>ORIGEM</p>    
+        <p><b>{{ product.origem }}</b></p>
+      </ion-col>
+      <ion-col size="6">
+        <p>DESTINO</p>    
+        <p><b>{{ product.destino }}</b></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <p>KM ESTIMADO</p>
+        <p><b>{{ product.km }}Km</b></p>
+      </ion-col>
+      <ion-col size="6">
+        <p>TEMPO ESTIMADO</p>
+        <p><b>{{ product.tempo }} HORAS</b></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+<ion-item  *ngIf="product.type == 2">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <p>HORAS DE SONO</p>    
+        <p><b>{{ product.horasSono }}</b></p>
+      </ion-col>
+      <ion-col size="6">
+        <p>REFEIÇÕES</p>    
+        <p><b>{{ product.refeicoes }}</b></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+<ion-item *ngIf="product.type == 3">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <p>FRETE ESTIMADO</p>    
+        <p><b>R${{ product.frete }}</b></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>

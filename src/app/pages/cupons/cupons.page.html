@@ -1,0 +1,10 @@
+<app-nav-tabs  [title]="'Cupons'"></app-nav-tabs>
+
+
+<ion-content fullscreen>
+  <ion-list *ngFor="let item of cupom; let i = index;">
+    <app-list-cupom [cupom]="item"></app-list-cupom>
+  </ion-list>
+
+
+</ion-content>

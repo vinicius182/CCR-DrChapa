@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "200646033138",
+    "firebase_url": "https://hack-c8271.firebaseio.com",
+    "project_id": "hack-c8271",
+    "storage_bucket": "hack-c8271.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200646033138:android:93e11db00ecba21d2d9a6b",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200646033138-l47kj3i41l63af2jk1jo0nsf2mq151rc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_74fUasl9oDyYOBt_dANHM2Xdfsm5mjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200646033138-l47kj3i41l63af2jk1jo0nsf2mq151rc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
