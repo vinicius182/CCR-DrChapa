@@ -11,6 +11,27 @@ Dr Chapa é uma aplicação desenvolvida com Ionic, Angular e Capacitor durante 
 ## Aplicação Backend
 [Repositório](https://github.com/evignacio/Vida-na-estrada)
 
+## Funcionalidades Desenvolvidas
+
+* Login
+* Cadastro
+* Acompanhamento de Viagem
+* Push Notifications
+* Área de cuidados médicos
+* Área de cupons
+* Botão de ajuda com telefone das concessionárias
+
+## Funcionalidade a serem desenvolvidas
+
+* Notificações via Whatsapp
+* Compartilhamento de eventos via Whatsapp
+* Obter cupons
+* Comandos de voz
+* Histório de viagens
+* Relatório de custos
+* Relatório de lucro
+* Relatório de saúde
+
 
 ## Construido com
 
